@@ -12,7 +12,7 @@ def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 
-def png(data):
+def png(data, flatten_alpha=False):
     assert data[:8] == b'\x89PNG\r\n\x1a\n'
     offset, packed, header = 8, bytearray(), None
     while offset < len(data):
@@ -58,9 +58,10 @@ def png(data):
         if channels == 3:
             result.extend(row)
         else:
-            assert all(row[i] == 255 for i in range(3, len(row), 4)), 'input alpha must be opaque'
+            assert flatten_alpha or all(row[i] == 255 for i in range(3, len(row), 4)), 'input alpha must be opaque'
             for i in range(0, len(row), 4):
-                result.extend(row[i:i+3])
+                alpha = row[i+3] / 255
+                result.extend(round(c * alpha + 255 * (1-alpha)) for c in row[i:i+3])
         prior = row
     return (width, height), result
 

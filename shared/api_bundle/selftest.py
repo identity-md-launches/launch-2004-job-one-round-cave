@@ -15,6 +15,54 @@ import api_bundle as bundle
 
 
 class BundleTests(unittest.TestCase):
+    def test_uniqueness_on_captured_public_api(self):
+        baseline = json.loads(Path(__file__).with_name('imd-openapi.json').read_bytes())
+        schema = baseline['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']
+        schema.setdefault('properties', {})['tags'] = {'type': 'array', 'items': {'type': 'string'}}
+        proposed = copy.deepcopy(baseline)
+        proposed['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']['properties']['tags']['uniqueItems'] = True
+        a, b = self.archive('old.zip', baseline), self.archive('new.zip', proposed)
+        report = bundle.compare(a, b, old_sha256=hashlib.sha256(a.read_bytes()).hexdigest(),
+                                new_sha256=hashlib.sha256(b.read_bytes()).hexdigest())
+        self.assertEqual(report['counts'], {'breaking': 1, 'review': 1, 'info': 0})
+        self.assertIn('unique_items_incompatible', [f['code'] for f in report['findings']])
+        self.assertEqual(bundle.compare(b, a)['status'], 'review_required')
+
+    def test_uniqueness_response_and_openapi30(self):
+        for version in ('3.0.3', '3.1.0'):
+            old = copy.deepcopy(self.doc)
+            old['openapi'] = version
+            old['paths']['/items']['get']['responses']['200']['content'] = {
+                'application/json': {'schema': {'type': 'array', 'uniqueItems': True}}}
+            new = copy.deepcopy(old)
+            del new['paths']['/items']['get']['responses']['200']['content']['application/json']['schema']['uniqueItems']
+            a, b = self.archive('old.zip', old), self.archive('new.zip', new)
+            self.assertEqual(bundle.compare(a, b)['counts']['breaking'], 1)
+            self.assertEqual(bundle.compare(b, a)['status'], 'review_required')
+
+    def test_uniqueness_invalid_boolean(self):
+        old = copy.deepcopy(self.doc)
+        old['paths']['/items']['get']['requestBody'] = {'content': {
+            'application/json': {'schema': {'type': 'array'}}}}
+        new = copy.deepcopy(old)
+        new['paths']['/items']['get']['requestBody']['content']['application/json']['schema']['uniqueItems'] = 1
+        a, b = self.archive('old.zip', old), self.archive('new.zip', new)
+        with self.assertRaises(ValueError):
+            bundle.compare(a, b)
+
+    def test_uniqueness_cli_break_review_and_error(self):
+        old = copy.deepcopy(self.doc)
+        old['paths']['/items']['get']['requestBody'] = {'content': {
+            'application/json': {'schema': {'type': 'array'}}}}
+        a = self.archive('old.zip', old)
+        for value, expected in ((True, 1), (False, 3), ('true', 2)):
+            new = copy.deepcopy(old)
+            new['paths']['/items']['get']['requestBody']['content']['application/json']['schema']['uniqueItems'] = value
+            b = self.archive('new.zip', new)
+            result = subprocess.run([sys.executable, '-B', str(Path(bundle.__file__)), str(a), str(b)],
+                                    capture_output=True, text=True, timeout=10)
+            self.assertEqual(result.returncode, expected, result.stderr)
+
     def setUp(self):
         scratch = Path('test/scratch')
         scratch.mkdir(parents=True, exist_ok=True)
@@ -164,7 +212,7 @@ class BundleTests(unittest.TestCase):
         proposed['paths']['/requests/quote']['post']['requestBody']['content']['application/json']['schema']['properties']['clientNote']['maxLength'] = 80
         old, new = self.archive('old.zip', baseline), self.archive('new.zip', proposed)
         report = bundle.compare(old, new)
-        self.assertEqual(report['extension'], 'constcheck-v1 (includes multiplecheck-v1 and boundcheck-v1)')
+        self.assertEqual(report['extension'], 'uniquecheck-v1 (includes constcheck-v1, multiplecheck-v1, boundcheck-v1)')
         self.assertEqual(report['counts']['breaking'], 1)
         self.assertEqual(report['counts']['review'], 1)
         self.assertIn('size_bound_incompatible', [f['code'] for f in report['findings']])

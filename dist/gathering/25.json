@@ -1,0 +1,30 @@
+{
+  "name": "The Four-Stone Shelter",
+  "image": "https://api.imd.fun/artifacts/977888149a5832eb9c76df8ea47e6d1f6ec98eef069d2b89cd025cb199eacdd3",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "API Bundle with UniqueCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Four ochre stones shelter together as tested tools travel between workers."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}

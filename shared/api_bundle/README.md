@@ -8,7 +8,12 @@ Run from a workspace root:
 python3 -B shared/api_bundle/selftest.py
 ```
 
-Gathering 24 result: **24 integration tests passed**. Checks include fixed-value `const` changes, request/response variance, OpenAPI 3.0 review, node-budget rejection before payload reads, invalid node limits, the previous approval and bound cases, `multipleOf` changes inside ZIPs, integer-domain equivalence, cooperative cancellation, a positive time budget, real public IMD API data, breaking/review/error CLI exits, CRC checks of every payload and inert executable content. Scratch lives under `test/scratch/` and is never a runtime dependency.
+Gathering 25 result: **28 integration tests passed**. New checks cover approved
+public-data array uniqueness changes, response variance in OpenAPI 3.0 and 3.1,
+malformed booleans, and CLI break/review/error exits. The inherited tests cover
+fixed values, bounds, multiples, approval, resource limits, cancellation, CRCs
+of every payload and inert executable content. Scratch lives under
+`test/scratch/` and is never a runtime dependency.
 
 For two archives you received:
 
@@ -28,7 +33,12 @@ Replace the uppercase argument labels with the real 64-character hex digests fro
 
 Paths must be in the current workspace with no symlink components, and the exact selected member must exist in both ZIPs. JSON goes to stdout. Exit **0** means no detected breakage, **1** potential breaking change, **2** invalid input/error, **3** unresolved review. Only exit 0 passes this static check; it does not prove runtime compatibility.
 
-The shared snapshot joins SafeZip (line 2) with ApiDelta, BoundCheck, MultipleCheck and ConstCheck (line 4). `vendor/` contains ordinary source files; `SOURCES.json` records original/delivered hashes. SafeZip and ApiDelta are byte-identical snapshots. BoundCheck, MultipleCheck and ConstCheck only adapt sibling module and demo capture paths to the shared layout. No line source was modified. Refresh these copies deliberately and rerun tests when upstream changes.
+The shared snapshot joins SafeZip (line 2) with ApiDelta, BoundCheck,
+MultipleCheck, ConstCheck and UniqueCheck (line 4). `vendor/` contains ordinary
+source files; `SOURCES.json` records original/delivered hashes. SafeZip and
+ApiDelta are byte-identical snapshots. Extensions only adapt sibling module and
+demo capture paths to the shared layout. No line source was modified. Refresh
+these copies deliberately and rerun tests when upstream changes.
 
 Each archive is read once, at most 32 MiB. Every member is validated for paths, types, compression, collisions and declared limits. Every file is streamed to check CRC, actual byte counts and SHA-256, including files not selected for comparison. Only the selected JSON is retained, at most 1 MiB. Nothing is extracted or imported from an archive. Inventories identify all checked files and selected-member/archive hashes.
 
@@ -40,6 +50,13 @@ ConstCheck adds fixed-value findings for OpenAPI 3.1: adding/changing a request
 `const` or removing/changing a response `const` may break callers. It distinguishes
 JSON booleans, null, strings and numbers, and preserves inherited review findings.
 For OpenAPI 3.0 and cross-version changes, `const` remains an unresolved review.
+
+UniqueCheck adds array-uniqueness findings for OpenAPI 3.0 and 3.1. Requiring
+unique request items can reject old repeated values; dropping response
+uniqueness can violate old consumers' expectations. Missing means false, visited
+values must be JSON booleans, and both explicitly non-array schemas skip the
+breaking rule. Inherited reviews remain even for relaxations. This does not
+prove duplicate values are reachable under all other schema constraints.
 
 Add `--nodes 200` (Python `compare(..., nodes=200)`) to bound distinct member
 paths plus implicit parent directories in each archive. For example,
@@ -55,7 +72,7 @@ See the complete offline flow with one command:
 python3 -B shared/api_bundle/demo.py
 ```
 
-Observed: a hypothetical `clientMode` fixed-value change in the captured public
+Observed: a hypothetical `clientTags` array-uniqueness change in the captured public
 IMD API produces one breaking and one retained review finding over five operations.
 The descriptions are packaged into reproducible ZIPs with approved SHA-256 hashes.
 A two-node budget accepts `docs/openapi.json`; a one-node budget refuses it.

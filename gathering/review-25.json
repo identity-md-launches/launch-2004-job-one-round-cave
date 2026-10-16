@@ -1,0 +1,43 @@
+{
+  "wall_path": "artifacts/gathering/wall-v6.png",
+  "wall_format": "PNG",
+  "wall_color": "RGB, 8 bits/channel, opaque",
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_sha256": "977888149a5832eb9c76df8ea47e6d1f6ec98eef069d2b89cd025cb199eacdd3",
+  "wall_bytes": 3042511,
+  "preview_path": "dist/gathering/25.jpg",
+  "preview_format": "JPEG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_bytes": 86904,
+  "preview_sha256": "19b64529ef3882e1636dfdcf65470406b104e31870b76324698a464a5d87e809",
+  "image_tool": "Installed mcp__image__generate_image",
+  "prompt": "Use case: illustration-story. Generate an isolated prehistoric cave-pigment symbol for compositing onto an existing cave wall: four small irregular red ochre pebbles gathered beneath a single low arched yellow ochre shelter, signifying four tools protected and carried together. Center the complete small symbol in the middle third of a pure white 1024 square background, with generous completely white margins. Simple flat earth pigment only, thumb-daubed ochre and worn dry-brush strokes, rough porous edges, natural irregularity. No rock background, no shading, no gradients, no letters, numbers, captions, logos, watermark, border, frame, people, hands or handprints. Only the small arch and four separate pebbles. This is a pigment insert; existing Pepe and cave framing will be preserved unchanged by pixel compositing.",
+  "assembly": "Generated pigment consumed in memory, alpha flattened for color extraction, selected ochre coverage composited onto bare upper-right stone. Generation output replaced in place by the whole inherited wall plus the mark. No intermediate image retained.",
+  "visual_review": {
+    "method": "Worker inspection of full PNG, then JPEG; byte comparison against inherited wall.",
+    "inherited_pepe": "Wide mouth and heavy-lidded eyes preserved.",
+    "hands": 2,
+    "digits_per_hand": [
+      5,
+      5
+    ],
+    "new_hands_or_handprints": 0,
+    "new_mark": "Four separate red ochre stones under a yellow ochre arch on bare upper-right rock.",
+    "rock_cracks_torchlight_framing_preserved": true,
+    "ancestors_preserved": "4597 changed pixels inside a visually bare 150x90 rectangle; zero changed pixels outside.",
+    "letters_numbers_captions_signatures_logos_watermarks_borders_frames_observed": false,
+    "photographs_3d_renders_real_people_political_or_hateful_symbols_added": false
+  },
+  "visual_requirements_unmet": [],
+  "limitations": [
+    "Inherited rock is photographic in appearance; its pixels were preserved as required, with no new photographic content added.",
+    "Small mark loses detail at thumbnail size.",
+    "Worker visual review is not independent human approval."
+  ]
+}

@@ -28,5 +28,11 @@
     "adaptation": "Sibling MultipleCheck path adjusted for shared vendor layout only.",
     "source_sha256": "b704936a3507107cfc5ffe100108eb2a1e6987c719a35f453fd79842573fc6be",
     "sha256": "cb57cbee21abae5986fb8f23c542b83cee2f69c2a71ded7517d1343999f8abf4"
+  },
+  "vendor/uniquecheck.py": {
+    "source": "line-4/tools/uniquecheck/uniquecheck.py",
+    "source_sha256": "c8153790ed62c504eadc174085309a081536e847a3b7d2a5128fdcaa31ffc30a",
+    "sha256": "66cc6c745e081a57217348c764c47b04d114439eb919dc1cbeb579fe7e6509f8",
+    "adaptation": "Sibling ConstCheck path adjusted for shared vendor layout only."
   }
 }
