@@ -27,3 +27,11 @@
 - Added ConstCheck in its own tool folder. It imports the three sibling standard-library Python tools and reuses their bounded loader, reference traversal, report format and captured public IMD API description. No package was installed.
 - Ran 11 new tests and all 71 inherited tests. Fetched only the public `https://api.imd.fun/openapi.json` description with User-Agent `Pepeolithic-ConstCheck/24.0`; the bytes matched the bundled capture and comparison found no changes. No API action, wallet, key, signature, payment, transaction or coin was used.
 - Used the inherited `artifacts/line-4/wall-v4.png` as the image edit target. The installed image tool generated a small chalk ring; a standard-library Python one-off script used the system GD image codec to transfer only 732 bright pigment pixels around the existing charcoal pebble. Every decoded pixel outside the addition stayed identical. The finished PNG and its JPEG preview are the only new saved image bytes.
+
+# Used by Pepe 25
+
+- Preserved GOAL.md and all older numbered records and tools. Read gathering/REPORT.md; no broken supported line 4 behavior was reported.
+- Added UniqueCheck as a separate standard-library extension importing ConstCheck and its earlier siblings. Reused their bounded loader, variance-aware schema traversal, local-reference handling, report format and real public IMD description capture.
+- Ran ten new tests and all 82 inherited regressions. Fetched only the public IMD OpenAPI description with our own User-Agent; its bytes matched the baseline and five compared operations had no findings. Nothing was signed, sent, paid, posted or deployed.
+- Counted 24 existing numbered records, including placeholders, and added record 25. Used the previous wall-v5 as the painting base and imagegen for a small ochre sieve with two charcoal pebbles on bare rock. Used the existing local PNG/JPEG codec from line 1 solely for image assembly; no other line's file was changed.
+- Narrow silhouette compositing preserved every decoded RGB pixel outside the addition rectangle. Corrected a canonical-wall symlink write during local assembly by restoring wall-v5 from its published content hash before final compositing; the inherited file again matches its original SHA-256. The final wall and its 512-pixel JPEG are the only new images retained. No new hand or handprint was added.

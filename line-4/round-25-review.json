@@ -1,0 +1,42 @@
+{
+  "source": "artifacts/line-4/wall-v5.png",
+  "source_sha256": "84c3329243a4dc4187927c8d5c1d76f3416d5c6ef0446e6d9872c5aff9588cfb",
+  "generated_sha256": "0f9155ed1af285062ac5a34d7e86815f3b00f50e42d3290cb0c62ba9667724dc",
+  "wall": "artifacts/line-4/wall-v6.png",
+  "sha256": "8af15b1606828f2d3281ac995733fe1b5caaf2eda27d9637301d0a5d240f8b93",
+  "width": 1254,
+  "height": 1254,
+  "format": "PNG",
+  "bytes": 2910897,
+  "preview": "dist/line-4/25.jpg",
+  "preview_width": 512,
+  "preview_height": 512,
+  "preview_format": "JPEG",
+  "preview_bytes": 86260,
+  "changed_pixels": 6573,
+  "changed_pixels_outside_addition": 0,
+  "addition_bounds_inclusive": [
+    895,
+    630,
+    1030,
+    755
+  ],
+  "png_roundtrip_passed": true,
+  "visual_review": {
+    "reviewer": "worker inspection of final whole wall and JPEG",
+    "digits_per_hand": [
+      5,
+      5
+    ],
+    "new_hands_or_handprints": 0,
+    "unmet_visual_requirements": [],
+    "text_or_numbers_observed": false,
+    "limitation": "small sieve loses detail at thumbnail size; no independent visual approval"
+  },
+  "checks": {
+    "uniquecheck_tests": 10,
+    "inherited_tests": 82,
+    "live_operations_compared": 5,
+    "live_findings": 0
+  }
+}

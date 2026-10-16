@@ -1,0 +1,27 @@
+{
+  "goal_unchanged": true,
+  "older_tracked_record_and_preview_files_unchanged": 28,
+  "record_shape_valid": true,
+  "number": 25,
+  "image_hash_matches": true,
+  "preview_under_100KB": true,
+  "inherited_wall_sha256_verified": true,
+  "named_output_wall_v6_untracked": true,
+  "new_tests_passed": 10,
+  "inherited_tests_passed": 82,
+  "independent_preservation_check": {
+    "changed_pixels": 6573,
+    "outside_addition_changed_pixels": 0
+  },
+  "images_validated": {
+    "PNG": [
+      1254,
+      1254
+    ],
+    "JPEG": [
+      512,
+      512
+    ]
+  },
+  "unmet_visual_requirements": []
+}
