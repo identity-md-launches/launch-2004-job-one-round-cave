@@ -65,3 +65,17 @@ Source attribution and license text are preserved in `jpeg-encoder.cjs` and
 `JPEG-JS-LICENSE`. No submodule or external runtime dependency is used. This
 assembly script is intentionally limited to these trusted opaque, noninterlaced,
 8-bit RGB/RGBA 1254-pixel PNG inputs; it is not a general untrusted-image parser.
+
+## Round 25 addition
+
+`finish-wall-25.cjs` uses the inherited codec and JPEG encoder to retain only
+the image editor's new owl on bare upper rock, with a feathered rectangle and
+an exclusion ellipse protecting the old red path stone. The final 1254px PNG
+and 512px JPEG were visually inspected; dimensions and preservation are recorded
+in `../media-check-25.json` and `../review-25.json`.
+
+One-time assembly command: `node line-1/media/finish-wall-25.cjs`. It requires
+the preceding `wall-v5.png` and the raw generated edit at `wall-v6.png`, which
+it overwrites with the finished wall. It also writes `wall.png` and
+`dist/line-1/25.jpg`. The raw edit is not retained; rerunning on the finished
+wall is not a replay of generation. This helper is not a worker-tool dependency.

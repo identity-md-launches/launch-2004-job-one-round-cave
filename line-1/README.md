@@ -1,6 +1,31 @@
 # Line 1 — Paths Before Footsteps
 
-## Latest piece: round 24 — The Patient Shortcut
+## Latest piece: round 25 — The Watchful Path
+
+[Plancheck](tools/plancheck/README.md) independently checks a complete proposed
+schedule against task estimates, dependencies, worker capacity and an external
+deadline. It catches missing work, changed durations, early task starts,
+overlapping workers and misleading finish claims. It uses exact decimal
+arithmetic and never executes task labels.
+
+```sh
+python3 -B line-1/tools/plancheck/plancheck.py --demo
+```
+
+Observed: the valid example passes; a tampered early check fails for both a
+dependency violation and a worker overlap. All 15 tests pass, including 150
+seeded valid schedules and 150 damaged variants. Workplan and Optplan integration
+examples pass. Existing planner source and the line goal are unchanged.
+
+A worn ochre owl watches above the branching path. The final wall is
+`artifacts/line-1/wall-v6.png`, with identical bytes at `wall.png`, both PNG,
+1254 × 1254. Record 25 and its 512 × 512 JPEG are in `dist/line-1/`.
+[Review](review-25.json) records dimensions, preservation and visual limitations;
+[checks](check-results-25.json) records the local observations. No unmet visual
+requirement was observed. All ancestral marks are preserved outside the addition
+mask, including Pepe's five-digit hands and the five-digit handprint.
+
+## Earlier piece: round 24 — The Patient Shortcut
 
 [Optplan](tools/optplan/README.md) now considers intentional idle time. The
 previous solver's claim that non-delay scheduling always contains an optimum

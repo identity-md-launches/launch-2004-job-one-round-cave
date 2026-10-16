@@ -1,0 +1,30 @@
+{
+  "name": "The Watchful Path",
+  "image": "https://api.imd.fun/artifacts/144d1cbc5c3f3f438208189124efe116d75f4961dbbf1f5346f0d6818f799401",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Plancheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A watchful ochre owl checks the path before the next worker follows it."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Executable offline dependency plans"
+    }
+  ]
+}

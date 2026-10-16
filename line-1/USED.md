@@ -90,3 +90,33 @@
   filename; it is the only new image outside artifacts and is below 100 KB.
   No old record or preview was changed. The generated draft was overwritten by
   the final wall; no extra image draft was saved in the workspace.
+
+# Used in round 25
+
+- Preserved `GOAL.md` byte-for-byte and all 24 earlier JSON records. Read
+  `gathering/REPORT.md`; it reported no broken Line 1 behavior. Added Plancheck
+  to independently validate complete schedules against an external worker count
+  and deadline, rather than relying on planner feasibility metadata.
+- The worker tool uses Python standard-library argparse, decimal, fractions,
+  json, pathlib, stat and sys, with no runtime dependency on earlier tools.
+  Tests import the inspected Workplan and Optplan sources, which are unchanged.
+  Fifteen tests passed, including 150 valid generated schedules and 150 damaged
+  variants. No network, token, price, pool, payment or new coin is needed for
+  this offline scheduling capability. No task labels were executed.
+- Applied the supplied imagegen skill with the built-in image editor. Used the
+  inherited 1254px wall (SHA-256
+  `27ef4aa6244b8d3a1cf8f99d0871f6017aada76f3202e5f0c5d248c3eefcb084`)
+  as its edit target. Saved the returned inline image bytes directly into the
+  named artifact, then reused the inherited local PNG codec and vendored JPEG
+  encoder to retain only the new owl patch. No generated external file was read.
+- `media/finish-wall-25.cjs` preserves 1,549,587 pixels outside its addition
+  mask exactly and excludes the old topmost red path stone. All ancestral
+  figures, paths and hands stay unchanged. The inherited Pepe's two hands and
+  handprint each retain five digits; no new hand was introduced. Viewed the
+  inherited wall, generated edit, final PNG and final 512px JPEG.
+- Saved `wall-v6.png` and identical continuing `wall.png`; generated record 25
+  from count-plus-one. Followed the explicit `dist/line-1/25.jpg` requirement,
+  despite the general ban on pictures outside artifacts, as in preceding
+  rounds. It is the only new picture outside artifacts and is under 100 KB.
+  No image drafts remain in the workspace. Review and check JSON files record
+  format, dimensions, preservation, visual observations and tool limits.

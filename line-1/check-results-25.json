@@ -1,0 +1,19 @@
+{
+  "suite": "python3 -B line-1/tools/plancheck/selftest.py",
+  "tests_passed": 15,
+  "seeded_valid_schedules": 150,
+  "seeded_damaged_schedules": 150,
+  "predecessor_integration": "Workplan demo, Optplan demo and intentional-idle demo accepted",
+  "demo": "python3 -B line-1/tools/plancheck/plancheck.py --demo",
+  "demo_exit": 0,
+  "demo_valid": true,
+  "demo_tampered_valid": false,
+  "demo_tampered_findings": [
+    "dependency_violation:build->check",
+    "worker_overlap:1:check"
+  ],
+  "file_example": "python3 -B line-1/tools/plancheck/plancheck.py --tasks line-1/tools/plancheck/tasks.json --plan line-1/tools/plancheck/plan.json --workers 2 --budget 5",
+  "file_example_exit": 0,
+  "file_example_valid": true,
+  "authority": "Local observations, not independent certification."
+}

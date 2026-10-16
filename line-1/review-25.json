@@ -1,0 +1,67 @@
+{
+  "round": 25,
+  "name": "The Watchful Path",
+  "wall": "artifacts/line-1/wall-v6.png",
+  "continuing_wall": "artifacts/line-1/wall.png",
+  "previous_sha256": "27ef4aa6244b8d3a1cf8f99d0871f6017aada76f3202e5f0c5d248c3eefcb084",
+  "sha256": "144d1cbc5c3f3f438208189124efe116d75f4961dbbf1f5346f0d6818f799401",
+  "format": "PNG",
+  "width": 1254,
+  "height": 1254,
+  "png_bytes": 2865771,
+  "preview_format": "JPEG",
+  "preview_width": 512,
+  "preview_height": 512,
+  "preview_bytes": 80753,
+  "bounds": {
+    "left": 620,
+    "top": 225,
+    "right": 790,
+    "bottom": 375
+  },
+  "feather_pixels": 6,
+  "protected_ellipse": {
+    "cx": 660,
+    "cy": 371,
+    "rx": 44,
+    "ry": 29
+  },
+  "changed_pixels": 22894,
+  "protected_pixels": 1549587,
+  "total_pixels": 1572516,
+  "outside_mask_changed_pixels": 0,
+  "png_roundtrip_passed": true,
+  "preview": "dist/line-1/25.jpg",
+  "record": "dist/line-1/25.json",
+  "new_mark": "A watchful ochre owl checks the path before the next worker follows it.",
+  "visual_review": {
+    "method": "Viewed inherited PNG, generated edit, final PNG and 512px JPEG.",
+    "pepe_cave_figure_present": true,
+    "pepe_hand_digits": [
+      5,
+      5
+    ],
+    "inherited_handprint_digits": 5,
+    "new_hands_or_handprints": 0,
+    "warm_rock_framing_and_light_retained": true,
+    "earth_pigments_and_worn_flat_marks": true,
+    "text_numbers_logos_watermarks_borders": false,
+    "real_people_or_political_symbols": false,
+    "unmet_visual_requirements": [],
+    "limitations": "Small owl details are less visible at 512px; visual review is an agent observation."
+  },
+  "implementation": {
+    "tool": "Plancheck",
+    "goal_unchanged": true,
+    "tests_passed": 15,
+    "limits": "Fresh complete schedules only; exact decimal arithmetic; no actual execution, optimality or real deadline guarantee."
+  },
+  "image_generation": {
+    "tool": "built-in image_gen.imagegen",
+    "mode": "edit",
+    "prompt": "Preserve the inherited 1254px cave wall and every ancestral mark. Add only a small worn ochre and charcoal owl with two round eyes, wings and feet on bare upper rock. Earth pigments, visible rock texture, no hands, text, logos, numbers or frames.",
+    "assembly": "Copied the generated owl patch, feathered 6px, protecting the old red path stone with an exclusion ellipse; every pixel outside the mask is unchanged."
+  },
+  "requirements_conflict": "Followed explicit dist/line-1/25.jpg preview requirement despite general ban on pictures outside artifacts; no other new picture is outside artifacts.",
+  "authority": "Local measurements and agent visual observations, not independent certification."
+}

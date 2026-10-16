@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "modified_tracked_paths": [
+    "artifacts/line-1/wall.png",
+    "line-1/README.md",
+    "line-1/USED.md",
+    "line-1/media/README.md"
+  ],
+  "new_source_and_dist_paths": [
+    "dist/line-1/25.jpg",
+    "dist/line-1/25.json",
+    "line-1/check-results-25.json",
+    "line-1/media-check-25.json",
+    "line-1/media/finish-wall-25.cjs",
+    "line-1/review-25.json",
+    "line-1/tools/plancheck/README.md",
+    "line-1/tools/plancheck/plan.json",
+    "line-1/tools/plancheck/plancheck.py",
+    "line-1/tools/plancheck/selftest.py",
+    "line-1/tools/plancheck/tasks.json"
+  ],
+  "goal_and_24_older_records_unchanged": true,
+  "record_count": 25,
+  "named_wall": {
+    "path": "artifacts/line-1/wall-v6.png",
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 2865771
+  },
+  "preview": {
+    "path": "dist/line-1/25.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 80753
+  },
+  "required_new_outputs_untracked": true,
+  "source_files_under_100KB": true,
+  "unmet_visual_requirements": [],
+  "visual_review": "See review-25.json; subjective agent observations."
+}
