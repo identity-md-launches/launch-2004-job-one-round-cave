@@ -1,0 +1,47 @@
+{
+  "step": 25,
+  "tool": "RewardWindow",
+  "tests": {
+    "selftest_cases": 5,
+    "seeded_windows": 40,
+    "result": "passed",
+    "demo_exit": 0,
+    "demo_window_atomic_zto_units": [25, 28],
+    "demo_reversal": "At 26 units, d and e each fell from 3 to 2 units."
+  },
+  "wall": {
+    "path": "artifacts/line-3/wall-v6.png",
+    "canonical_path": "artifacts/line-3/wall.png",
+    "format": "PNG",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "7851c124e01faa4291ac901c057e8e3325c764ebd486b6f8a172529d4798f42f"
+  },
+  "preview": {
+    "path": "dist/line-3/25.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 62972
+  },
+  "method": "Built-in imagegen edit, then standard-library PNG compositing of the new patch; the 512-pixel preview uses a vendored ordinary-file JPEG encoder.",
+  "preservation": {
+    "inherited_wall_sha256": "c22f5d296b88dfce5ba7f36d85038c6b281ca94fb38c7dd14dfe1c4b6211558c",
+    "addition_rectangle": [625, 580, 905, 787],
+    "changed_pixel_bbox": [626, 581, 903, 786],
+    "outside_addition_pixels_equal": true
+  },
+  "visual_review": {
+    "reviewed_full_size_and_thumbnail": true,
+    "existing_pepes": 2,
+    "visible_hands": 1,
+    "digits_on_visible_hand": 5,
+    "new_hands": 0,
+    "handprints": 0,
+    "text_or_numbers_or_logos_seen": false,
+    "rock_lighting_framing_preserved": true,
+    "new_mark": "four small rising charcoal bowls with ochre pebbles",
+    "unmet_requirements": [],
+    "limitations": "Visual review is subjective; rock pixels inside the new patch are generated. Every pixel outside the patch is unchanged."
+  }
+}

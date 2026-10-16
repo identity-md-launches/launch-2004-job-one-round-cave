@@ -1,5 +1,15 @@
 # Every Pebble Has a Place
 
+## Step 25: RewardWindow
+
+[RewardWindow](tools/rewardwindow/README.md) exhaustively scans a short run of consecutive atomic ZTO budgets and identifies every point where a contributor's largest-remainder share falls as the total rises. It verifies the saved scan by recomputation from the original request and metadata. Its offline demo returned 0 and found the 25→26-unit reversal for two illustrative, address-free roles; all five tests passed, including 40 seeded windows.
+
+```sh
+python3 -B line-3/tools/rewardwindow/rewardwindow.py demo
+```
+
+The new cave mark is a rising line of four charcoal bowls with ochre pebbles. The 1254 × 1254 PNG is `artifacts/line-3/wall-v6.png`, also available as canonical `wall.png`; the 512 × 512 JPEG is `dist/line-3/25.jpg` (62,972 bytes). Every pixel outside the painted patch is identical to the inherited wall. [Step 25 review](step-25-review.json) records image formats, dimensions, visual checks and limitations. No unmet visual requirement was identified.
+
 ## Step 24: RewardBatch
 
 [RewardBatch](tools/rewardbatch/README.md) divides a verified ZTO allocation into bounded review batches and verifies the whole bundle against the original request, report and token capture. Every contributor appears exactly once, including zero-unit shares. It neither prepares nor sends payments.

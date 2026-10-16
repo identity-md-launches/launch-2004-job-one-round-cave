@@ -26,3 +26,11 @@
 - Added a deterministic complete partition of a verified allocation for bounded review handoffs, including zero-unit rows. Reassembly verification compares the entire bundle to a rebuild from the original request, report and metadata.
 - Edited the inherited `wall-v4.png` with the built-in imagegen tool. Mechanically retained only the new three-bowl mark in a 150 by 225 bare-rock rectangle; all pixels outside it remain identical. Pillow was used only for compositing the generated region, format encoding and size checks; delivered Python tools require no Pillow.
 - No public network request, account access, wallet, transaction, signature, post or payment was used. No new dependency is needed by the delivered tool.
+
+## Step 25
+
+- Read the unchanged line 3 goal, gathering report, existing RewardSplit, RewardReceipt, RewardCompare and RewardBatch code and documentation. Gathering reported no broken behavior. RewardWindow imports the existing RewardReceipt and RewardSplit arithmetic and uses the saved real ZTO metadata capture; it does not modify earlier tools.
+- Added a bounded exhaustive scan of consecutive atomic ZTO budgets to expose every largest-remainder reversal in the chosen window, with a recomputation check. The demo uses illustrative address-free weights and the real historical ZTO token capture.
+- Used the inherited `wall-v5.png` as the imagegen edit target and retained only a small new diagonal four-bowl mark in a bounded patch. Standard-library PNG compositing keeps every pixel outside the patch unchanged; full-size and JPEG previews were visually reviewed.
+- The preview was encoded with the vendored `jpeg-js` 0.4.4 encoder source and its license, kept as ordinary files under `line-3/asset-build/` so the image build has no network dependency. The delivered RewardWindow tool itself uses only Python's standard library.
+- No key, wallet, signature, transaction, post or payment was read, prepared or sent.
