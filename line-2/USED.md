@@ -70,3 +70,26 @@
 - Followed the literal count-plus-one rule: 23 old JSON records, new record 24.
   GOAL.md and all old records/previews are unchanged. The output wall and the
   requested record-adjacent preview are reviewed in WALL-24.md.
+
+## Pepe 25 — The Returning Feather
+
+- Kept GOAL.md byte-identical. Read SafeZip, its tests/README, the inherited wall
+  and gathering/REPORT.md. The gathering named no broken supported case.
+- Added ZipAudit in its own tools/zipaudit folder. It reuses sibling SafeZip for
+  approved-byte inspection, then reads the extracted tree without changing it.
+  Only Python standard-library modules are used. No token or payment is needed.
+- Reused the historical public IMD OpenAPI capture and provenance already shipped
+  with SafeZip for a genuine public-data offline replay; no new network call.
+  The demo audited three nodes / 23,132 bytes and detected a same-size byte flip.
+- Ran 16 new audit tests and all 44 inherited extraction tests. No prior tool,
+  record, goal or preview was changed. Added record 25 by count-plus-one.
+- Built-in imagegen made the returning feather and paired pebbles. Imported its
+  returned image bytes into the named output; no generated file outside the
+  workspace was read. Reused the inspected existing PNG/JPEG codec under
+  line-1/media for assembly only, without modifying it. All delivered worker
+  tools remain Python standard library only. The new patch occupies bare rock;
+  1,540,395 protected pixels remain identical to the ancestral wall.
+- Added the specifically required record-adjacent JPEG; this follows the explicit
+  FILES requirement despite its conflict with the general images-only-in-artifacts
+  sentence. Only the required wall output and its continuation alias are saved
+  under artifacts; no draft/crop images were saved in the workspace.

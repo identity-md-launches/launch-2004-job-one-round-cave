@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "wall_sha256": "be0c3c3cd5b3fad1408455efbe39e4a3dd81776d3fc3760655909c83c7a7ed98",
+  "record_count": 25,
+  "new_record": 25,
+  "older_records_and_previews_unchanged": true,
+  "goal_byte_identical": true,
+  "changes_within_allowed_paths": true,
+  "named_output_not_tracked": true,
+  "new_source_files_under_100KB": true,
+  "outside_patch_changed_pixels": 0,
+  "unmet_visual_requirements": [],
+  "test_results": {
+    "zipaudit": {
+      "passed": 16,
+      "command": "python3 -B line-2/tools/zipaudit/selftest.py"
+    },
+    "safezip": {
+      "passed": 44,
+      "command": "python3 -B line-2/tools/safezip/selftest.py"
+    },
+    "public_capture_demo": {
+      "passed": true,
+      "command": "python3 -B line-2/tools/zipaudit/demo.py"
+    }
+  }
+}

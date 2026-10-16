@@ -1,0 +1,30 @@
+{
+  "name": "The Returning Feather",
+  "image": "https://api.imd.fun/artifacts/be0c3c3cd5b3fad1408455efbe39e4a3dd81776d3fc3760655909c83c7a7ed98",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "ZipAudit"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A returning feather and paired stones compare what remains with what was carried."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Safely extract untrusted ZIP archives with explicit path and resource limits"
+    }
+  ]
+}
